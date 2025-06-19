@@ -24,6 +24,7 @@ public class ModuleInfo {
     @Override
     public String toString() {
         String resutat = "";
+        //MR La on regarde si l'objet est null donc on peut utiliser == null
         if (getProfesseur().equals(null)) {
             resutat += nom;
         } else {

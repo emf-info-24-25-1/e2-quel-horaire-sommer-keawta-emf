@@ -2,6 +2,7 @@ package models;
 
 public class Horaire {
     public static final int NBRE_DE_BLOCS = 6;
+    //MR doit être mi en final
     private Bloc[] blocs;
 
     public Horaire() {

@@ -3,6 +3,7 @@ package models;
 public class Bloc {
     public static final int NBRE_DEMI_JOURS_SEMAINE = 10;
     private final String nom;
+    //MR l'attribut peut être également final car le tableau ne changera pas
     private ModuleInfo[] modules;
 
     public Bloc(String nom) {
@@ -11,12 +12,14 @@ public class Bloc {
 
         ModuleInfo Matu = new ModuleInfo("Matu");
         for (int i = 0; i < modules.length; i++) {
+            //MR j < 4 car on veut que ce soit de 0 à 3
             for (int j = 0; j < 5; j++) {
                 modules[i] = Matu;
             }
         }
     }
 
+    //MR C'est bien, mais tu ne mets pas ensuite le module dans le tableau
     public boolean planifierModule(ModuleInfo module) {
         boolean estPlanifie = false;
         int compteur = 0;
